@@ -179,7 +179,7 @@ nav a:hover {
         grid-row: row2/row2-end;
     }
 
-    aside {
+    .navigation {
         grid-column: column2/column2-end;
         grid-row: row1/row1-end;
     }

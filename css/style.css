@@ -47,7 +47,8 @@ body {
     margin: .4rem 0;
 }
 
-.post-item, .news-item {
+.post-item,
+.news-item {
     margin-bottom: .4rem;
 }
 
@@ -64,7 +65,10 @@ body {
     padding: 3rem;
 }
 
-.post-item, .header-item, .nav-item, footer {
+.post-item,
+.header-item,
+.nav-item,
+footer {
     padding: 1rem;
 }
 
@@ -139,7 +143,7 @@ main {
     color: #fff;
 }
 
-.hidden{
+.hidden {
     position: absolute;
     clip: rect(0 0 0 0);
 }

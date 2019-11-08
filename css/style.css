@@ -140,6 +140,11 @@ nav a:hover {
     color: #ffffff;
 }
 
+.hidden{
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
 /* Media */
 
 /* Above 360px */

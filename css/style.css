@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    background: #f6f5f2;
+    height: 100%;
+    text-align: center;
+}
+
+.header-item:first-of-type {
+    width: 65%;
+    background: #b0c5eb;
+    margin-right: .5%;
+}
+
+.header-item:last-of-type {
+    width: 34.5%;
+    background: #b9b1c6;
+}
+
+.images > img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: .4rem;
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: .4rem 0;
+}
+
+.post-item,
+.news-item {
+    margin-bottom: .4rem;
+}
+
+.description-item:first-of-type {
+    background: #c2c2d6;
+    width: 100%;
+    padding: 3rem;
+    margin-bottom: .4rem;
+}
+
+.description-item:last-of-type {
+    background: #ccccff;
+    width: 100%;
+    padding: 3rem;
+}
+
+.post-item,
+.header-item,
+.nav-item,
+footer {
+    padding: 1rem;
+}
+
+.post-item:nth-of-type(1) {
+    background: #94b8b8;
+}
+
+.post-item:nth-of-type(2) {
+    background: #669999;
+}
+
+.post-item:nth-of-type(3) {
+    background: #94b8b8;
+}
+
+.news-item {
+    background: #96acb5;
+    padding: 4rem;
+}
+
+.nav {
+    background: #bfbfbb;
+}
+
+footer {
+    background: #8eb3f5;
+}
+
+.wrapper {
+    margin: 0 .2rem;
+    display: grid;
+    align-items: center;
+    grid-row-gap: .4rem;
+    grid-template-columns: [column1] 100% [column1-end];
+    grid-template-rows: [row1] 1fr [row1-end row2] auto [row2-end row3] 1fr [row3-end];
+}
+
+header {
+    grid-column: column1/column1-end;
+    grid-row: row1/row1-end;
+    display: flex;
+}
+
+footer {
+    grid-column: column1/column1-end;
+    grid-row: row3/row3-end;
+}
+
+main {
+    grid-column: column1/column1-end;
+    grid-row: row2/row2-end;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem .5rem .5rem;
+    background: #96acb5;
+}
+
+.nav a {
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+/* Media */
+
+/* Above 360px */
+@media screen and (min-width: 361px) {
+
+    .header-item:first-of-type {
+        width: 15%;
+    }
+
+    .header-item:last-of-type {
+        width: 84.5%;
+    }
+
+    .description-item:first-of-type {
+        width: 34.5%;
+        margin-bottom: 0;
+    }
+
+    .description-item:last-of-type {
+        width: 65%;
+    }
+
+    .m-content {
+        display: grid;
+        grid-template-columns: [column1] 60% [column1-end column2] auto [column2-end];
+        grid-template-rows: [row1] 2fr [row1-end row2] auto [row2-end];
+        grid-column-gap: .5%;
+    }
+
+    .posts {
+        grid-column: column1/column1-end;
+        grid-row: row1/row1-end;
+    }
+
+    .news {
+        grid-column: column1/column1-end;
+        grid-row: row2/row2-end;
+    }
+
+    .navigation {
+        grid-column: column2/column2-end;
+        grid-row: row1/row1-end;
+    }
+
+    .nav a {
+        display: block;
+    }
+
+    .mobile-nav-title {
+        display: none;
+    }
+
+    .nav-item {
+        padding: .26rem;
+    }
+
+    .post-item:first-of-type {
+        padding: 4rem;
+        width: 100%;
+    }
+
+    .news-item {
+        margin-bottom: 0;
+    }
+}
+
+/* Up to 1024px */
+
+@media screen and (min-width: 361px) and (max-width: 1024px) {
+    .images > img {
+        width: 49%;
+        height: 200px;
+    }
+
+    .post-item {
+        padding: 3rem;
+    }
+
+    .nav-title {
+        padding-bottom: .2rem;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+}
+
+/* Above 1024px */
+
+@media screen and (min-width: 1025px) {
+
+    .images > img {
+        width: 24%;
+        height: 200px;
+    }
+
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .post-item + .post-item {
+        width: 49.5%;
+        padding: 3rem;
+    }
+
+    .news-item {
+        padding: 7rem;
+    }
+}

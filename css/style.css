@@ -15,19 +15,19 @@ ol, ul {
 
 body {
     font-family: "Roboto", sans-serif;
-    color: #000000;
+    color: #000;
     background: #f6f5f2;
     height: 100%;
     text-align: center;
 }
 
-header > div:first-of-type {
+.header-item:first-of-type {
     width: 65%;
     background: #b0c5eb;
     margin-right: .5%;
 }
 
-header > div:last-of-type {
+.header-item:last-of-type {
     width: 34.5%;
     background: #b9b1c6;
 }
@@ -44,50 +44,49 @@ header > div:last-of-type {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: .4rem 0 .4rem 0;
+    margin: .4rem 0;
 }
 
-.posts > div, .news > div {
+.post-item, .news-item {
     margin-bottom: .4rem;
 }
 
-.description > div:first-of-type {
+.description-item:first-of-type {
     background: #c2c2d6;
     width: 100%;
     padding: 3rem;
     margin-bottom: .4rem;
 }
 
-.description > div:last-of-type {
+.description-item:last-of-type {
     background: #ccccff;
     width: 100%;
     padding: 3rem;
 }
 
-.posts > div, header > div, footer, nav ul {
+.post-item, .header-item, .nav-item, footer {
     padding: 1rem;
 }
 
-.posts > div:nth-of-type(1) {
+.post-item:nth-of-type(1) {
     background: #94b8b8;
 }
 
-.posts > div:nth-of-type(2) {
+.post-item:nth-of-type(2) {
     background: #669999;
 }
 
-.posts > div:nth-of-type(3) {
+.post-item:nth-of-type(3) {
     background: #94b8b8;
 }
 
-.news div {
+.news-item {
     background: #96acb5;
     padding: 4rem;
-    background-size: cover;
 }
 
-nav ul {
-    background: #bfbfbf;
+.nav {
+    background: #bfbfbb;
 }
 
 footer {
@@ -124,20 +123,20 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    padding: 1.5rem .5rem .5rem .5rem;
+    padding: 1.5rem .5rem .5rem;
     background: #96acb5;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     cursor: pointer;
     display: none;
-    color: #000000;
+    color: #000;
     letter-spacing: 1px;
 }
 
-nav a:hover {
-    color: #ffffff;
+.nav a:hover {
+    color: #fff;
 }
 
 .hidden{
@@ -150,20 +149,20 @@ nav a:hover {
 /* Above 360px */
 @media screen and (min-width: 361px) {
 
-    header > div:first-of-type {
+    .header-item:first-of-type {
         width: 15%;
     }
 
-    header > div:last-of-type {
+    .header-item:last-of-type {
         width: 84.5%;
     }
 
-    .description > div:first-of-type {
+    .description-item:first-of-type {
         width: 34.5%;
         margin-bottom: 0;
     }
 
-    .description > div:last-of-type {
+    .description-item:last-of-type {
         width: 65%;
     }
 
@@ -189,24 +188,24 @@ nav a:hover {
         grid-row: row1/row1-end;
     }
 
-    nav a {
+    .nav a {
         display: block;
     }
 
-    ul li:first-of-type {
+    .mobile-nav-title {
         display: none;
     }
 
-    nav ul {
+    .nav-item {
         padding: .26rem;
     }
 
-    .posts > div:first-of-type {
+    .post-item:first-of-type {
         padding: 4rem;
         width: 100%;
     }
 
-    .news > div {
+    .news-item {
         margin-bottom: 0;
     }
 }
@@ -219,15 +218,15 @@ nav a:hover {
         height: 200px;
     }
 
-    .posts > div {
+    .post-item {
         padding: 3rem;
     }
 
-    ul li {
+    .nav-title {
         padding-bottom: .2rem;
     }
 
-    nav a {
+    .nav a {
         font-size: 12px;
     }
 }
@@ -247,12 +246,12 @@ nav a:hover {
         justify-content: space-between;
     }
 
-    .posts div ~ div {
+    .post-item + .post-item {
         width: 49.5%;
         padding: 3rem;
     }
 
-    .news div {
+    .news-item {
         padding: 7rem;
     }
 }
